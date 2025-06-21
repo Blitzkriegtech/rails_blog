@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   root "articles#index"
 
   resources :articles do
+    member do
+      get :return_homepage
+    end
     resources :comments
   end
 end
